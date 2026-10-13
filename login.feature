@@ -15,3 +15,8 @@ Cenário: Ao inserir um dos campos inválidos deve exibir uma mensagem de alerta
 Quando eu informar um e-mail inválido
 E ou senha inválida
 Então deve ser exibido a mensagem de alerta "Usuário ou senha inválidos"
+
+|usuário             |senha             |acao_ou_resultado
+|cliente@email.com   |"senha123"        |"direcionar o usuário para a tela de checkout"
+|invalido@email.com  |"senha123"        |"Usuário ou senha inválidos"
+|cliente@email.com   |"errada321"       |"Usuário ou senha inválidos"

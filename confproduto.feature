@@ -8,9 +8,12 @@ Funcionalidade: Configurar produto
   Para depois inserir no carrinho
 
   Cenário: Seleção de cor, tamanho e quantidade devem ser obrigatórios
-  Dado que eu abro a tela inicial do site
-  Quando eu selecionar algum produto 
-  Então deve ser exibido uma aba lateral ao lado do produto com as opções disponíveis de cor, tamanho e quantidade
+  Dado que o cliente escolheu um produto
+  E a cor
+  E o tamanho
+  E a quantidade
+  Quando ele tentar inserir o produto no carrinho
+  Então o sistema deve exibir a mensagem de Sucesso: "Produto adicionado ao carrinho"
 
   Cenário: Deve permitir até 10 produtos por venda
   Dado que eu adiciono produtos no carrinho
