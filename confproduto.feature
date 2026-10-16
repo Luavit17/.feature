@@ -8,19 +8,20 @@ Funcionalidade: Configurar produto
   Para depois inserir no carrinho
 
   Cenário: Seleção de cor, tamanho e quantidade devem ser obrigatórios
-  Dado que o cliente escolheu um produto
-  E a cor
-  E o tamanho
-  E a quantidade
-  Quando ele tentar inserir o produto no carrinho
-  Então o sistema deve exibir a mensagem de Sucesso: "Produto adicionado ao carrinho"
+  Dado que o usuário está na tela do produto
+  Quando selecionar a cor, tamanho e quantidade
+  E clicar em "Adicionar ao carrinho"
+  Então o sistema deve exibir a mensagem "Produto adicionado ao carrinho"
 
   Cenário: Deve permitir até 10 produtos por venda
-  Dado que eu adiciono produtos no carrinho
-  Quando eu seleciono mais de 10 produtos para realizar a compra
-  Então deve ser exibido uma mensagem de alerta informando que: "O limite de compra é de até 10 produtos por vez, por favor selecione a quantidade permitida."
+  Dado que o usuário está na tela de "Produtos no carrinho"
+  Quando selecionar mais de 10 produtos
+  E clicar em "Finalizar compra"
+  Então o sistema deve exibir a mensagem de alerta "Quantidade máxima de produtos por venda é 10, por favor ajuste a quantidade e tente novamente"
 
-Cenário: Quando eu clicar no botão "limpar" deve voltar ao estado original
-  Dado que eu decido não seguir com alguma modificação no produto
-  Quando eu clicar no botão "limpar" 
-  Então as informações que eu tinha modificado deve voltar a forma originalsss
+  Cenário: Quando eu clicar no botão "limpar" deve voltar ao estado original
+  Dado que o usuário está na tela do produto
+  Quando fizer alterações na customização do produto
+  E clicar no botão "Limpar"
+  Então o produto deve voltar ao estado original
+
